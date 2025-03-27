@@ -21,6 +21,22 @@ The time complexity of the Dijkstra's algorithm implementation in this project i
   
 This complexity arises because each vertex is added to the priority queue once, and each edge is processed once, with logarithmic time complexity for the priority queue operations.
 
+### Space Complexity 
+
+The graph is represented using an adjacency list, which is implemented as a dictionary of lists in Python. The space complexity of this representation can be analyzed as follows:
+
+- **Vertices (V)**: Each vertex in the graph requires space for its entry in the dictionary. Therefore, the space required for all vertices is \(O(V)\).
+
+- **Edges (E)**: Each edge in the graph is represented as a tuple in the adjacency list of its corresponding vertex. Since each edge connects two vertices, the total space required for all edges is \(O(E)\).
+
+Combining these two components, the overall space complexity of the graph representation is:
+
+**\[
+O(V + E)
+\]**
+
+This means that the space required grows linearly with the number of vertices and edges in the graph, making it efficient for representing sparse graphs.
+
 ## How It Works
 1. **Input**: The user inputs the source and destination bus stops.
 2. **Graph Representation**: The bus routes are represented as a graph, where each bus stop is a node, and each route is an edge with a weight.
